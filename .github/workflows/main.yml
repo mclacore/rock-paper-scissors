@@ -21,6 +21,7 @@ jobs:
           artifact: ${{ secrets.AUTHENTICATION_ARTIFACT_ID }}
           region: westus
           image-tag: ${{ github.sha }}
+          build-context: /massdriver
       - name: Publish Bundle 
         uses: massdriver-cloud/actions/bundle_publish@v3
       - name: Set App1 Image Version
