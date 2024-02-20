@@ -24,7 +24,7 @@ jobs:
       - name: Publish Bundle 
         uses: massdriver-cloud/actions/bundle_publish@v3
         with:
-          build-directory: /massdriver
+          build-directory: ./massdriver
       - name: Set App1 Image Version
         uses: massdriver-cloud/actions/app_patch@v3
         with:
