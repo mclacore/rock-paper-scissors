@@ -29,7 +29,7 @@ jobs:
         uses: massdriver-cloud/actions/app_patch@v4
         with:
           project: script
-          target: eastus
+          env: eastus
           manifest: rps
           set: |
             .image.tag = "${{ github.sha }}"
@@ -37,7 +37,7 @@ jobs:
         uses: massdriver-cloud/actions/app_patch@v4
         with:
           project: script
-          target: westus
+          env: westus
           manifest: rps
           set: |
             .image.tag = "${{ github.sha }}"
@@ -45,11 +45,11 @@ jobs:
         uses: massdriver-cloud/actions/app_deploy@v4
         with:
           project: script
-          target: eastus
+          env: eastus
           manifest: rps
       - name: Deploy App2
         uses: massdriver-cloud/actions/app_deploy@v4
         with:
           project: script
-          target: westus
+          env: westus
           manifest: rps
