@@ -1,4 +1,1 @@
 Flask>=2.0.2
-datetime
-azure.identity
-azure.storage.blob
